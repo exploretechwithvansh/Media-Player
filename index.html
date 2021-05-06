@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Media Player</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="shortcut icon" type="image/png" href="assets/Icon.png"/>
+	</head>
+	<body>
+		<div class="main-frame">
+			<div class="header">
+				<section class="flex">
+					<img src="assets/Icon.png" alt="aimikel logo" class="logo" />
+					<h1>Media Player</h1>
+				</section>
+
+				<h5 class="title">Please select a file to play (.mp3 or .mp4)</h5>
+				<button type="button" class="btn" id="btn-open">Select</button>
+				<input class="hide" type="file" id="files" name="files" multiple />
+			</div>
+			<div class="player-frame">
+				<img src="assets/Icon.png" class="image" id="watermark" alt="Icon" />
+				<video id="video" class="video hide">
+					<source src="" type="" />
+				</video>
+				<div class="playlist hide"></div>
+			</div>
+			<div class="footer">
+				<div class="progress-frame">
+					<span class="elapsed-time">00:00:00</span>
+					<section class="default-bar">
+						<section class="progress-bar"></section>
+						<span class="hover-time hide">00:00:00</span>
+					</section>
+					<span class="total-time">00:00:00</span>
+				</div>
+				<div class="controls-frame">
+					<div class="btns">
+						<button type="button" id="btn-backward" class="btn" title="Backward"></button>
+						<button type="button" id="btn-play" class="btn" title="play/pause"></button>
+						<button type="button" id="btn-forward" class="btn" title="Forward"></button>
+						<button type="button" id="btn-previous" class="btn" title="Previous"></button>
+						<button type="button" id="btn-repeat" class="btn active" title="Repeat"></button>
+						<button type="button" id="btn-next" class="btn" title="Next"></button>
+						<button type="button" id="btn-maximize" class="btn" title="Maximize"></button>
+						<button type="button" id="btn-playlist" class="btn" title="Playlist"></button>
+						<span class="list-count">0/0</span>
+					</div>
+					<section class="volume-frame">
+						<span class="volume-val">100%</span>
+						<button type="button" id="btn-volume" class="btn"></button>
+						<input type="range" name="volume" id="volume" min="0" max="100" value="100" />
+					</section>
+				</div>
+			</div>
+		</div>
+		<script src="js/svg.js"></script>
+		<script src="js/fn.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
